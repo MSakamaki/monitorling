@@ -6,9 +6,10 @@ import path from 'path';
 var app = express();
 app.server = http.createServer(app);
 
-var port = 8081;
+var port = 9000;
 
-app.use(express.static( path.join(__dirname, '..', '/client')));
+app.use(express.static(path.join(__dirname, '..', '/client')));
+app.use(express.static(path.join(__dirname, '../..', 'node_modules')));
 
 app.use((req, res, next)=> {
   res.header("Access-Control-Allow-Origin", "*");
