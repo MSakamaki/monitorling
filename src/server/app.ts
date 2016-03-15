@@ -1,12 +1,18 @@
-import http from 'http';
-import express from 'express';
-import bodyParser from 'body-parser';
-import path from 'path';
+/// <reference path="../../typings/express-serve-static-core/express-serve-static-core.d.ts" />
+/// <reference path="../../typings/express/express.d.ts" />
+/// <reference path="../../typings/mime/mime.d.ts" />
+/// <reference path="../../typings/serve-static/serve-static.d.ts" />
+/// <reference path="../../typings/body-parser/body-parser.d.ts" />
 
-var app = express();
+import http = require('http');
+import express = require('express');
+import bodyParser = require('body-parser');
+import path = require('path');
+
+const app: any  = express();
+const port: number = 9000;
+
 app.server = http.createServer(app);
-
-var port = 9000;
 
 app.use(express.static(path.join(__dirname, '..', '/client')));
 app.use(express.static(path.join(__dirname, '../..', 'node_modules')));
@@ -21,12 +27,6 @@ app.use((req, res, next)=> {
 app.server.listen(port, process.env.OPENSHIFT_NODEJS_IP || process.env.IP || undefined, () => {
   console.log('Express server listening on %d, in %s mode', port, app.get('env'));
 });
-
-
-
-// app.use(cors({
-// 	exposedHeaders: ['Link']
-// }));
 
 app.use(bodyParser.json({
   limit : '100kb'

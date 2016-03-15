@@ -6,3 +6,6 @@ npm-debug.log
 
 typings
 dest/*
+
+gulp/
+src_
