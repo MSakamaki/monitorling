@@ -1,4 +1,5 @@
 node_modules
+src/client/jspm_packages
 .env
 Dockerfile
 docker-compose.yml
