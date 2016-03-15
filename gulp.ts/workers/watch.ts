@@ -2,14 +2,18 @@
 
 import env from '../env';
 
-// const gulp = require('gulp');
-// let livereload = require('gulp-livereload');
+(()=>{
 
-// gulp.task('watch', ()=> {
-//   livereload.listen();
+const gulp = require('gulp');
+let livereload = require('gulp-livereload');
 
-//   gulp.watch(env.src.browser.script)
-//     .on('change', (event)=> gulp.src(env.src.browser.script).pipe(livereload()));
+  gulp.task('watch', () => {
+    livereload.listen();
 
-//   gulp.watch(env.src.browser.html, ()=> gulp.src(env.src.browser.html).pipe(livereload()));
-// });
+    gulp.watch(env.src.client.src,
+      () => gulp.src(env.src.client.src).pipe(livereload()));
+
+    gulp.watch(env.src.client.jspm,
+      () => gulp.src(env.src.client.jspm).pipe(livereload()));
+  });
+})();

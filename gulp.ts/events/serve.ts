@@ -10,6 +10,8 @@ import env from '../env';
 
   gulp.task('serve', cb=>
     runSequence(
+      'run_server',
+      'watch',
       cb));
 
 })();

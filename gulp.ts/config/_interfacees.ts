@@ -8,11 +8,16 @@ export interface RootPathInf {
   gulp: string,
   dest: string,
   dist: string,
+  dist_server: string,
+  dist_client: string,
 };
 
 export interface SourcePathsInf {
-  platform: {
+  client: {
+    src: Array<string>,
+    jspm: Array<string>
   },
-  browser: {
+  server: {
+    src: Array<string>
   },
 };

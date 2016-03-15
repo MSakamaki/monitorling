@@ -28,7 +28,10 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-description": "^0.1.2",
+    "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^1.2.0",
+    "gulp-typescript": "^2.12.1",
+    "gulp-useref": "^3.0.8",
     "jspm": "^0.16.31",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
@@ -38,7 +41,7 @@
   "jspm": {
     "name": "monitor-app",
     "directories": {
-      "lib": "src/client",
+      "lib": "src/client/monitor-app",
       "packages": "src/client/jspm_packages"
     },
     "configFiles": {

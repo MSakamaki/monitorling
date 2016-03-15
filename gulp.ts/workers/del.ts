@@ -5,6 +5,6 @@ import env from '../env';
 const gulp = require('gulp');
 const del = require('del');
 
-// gulp.task('clean:compile', done=> del([
-//     `${env.dir.compile}`,
-//   ], done));
+gulp.task('clean:dist', done=> del([
+    env.dir.dist,
+  ], done));

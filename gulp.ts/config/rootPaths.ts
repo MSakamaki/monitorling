@@ -9,6 +9,8 @@ const ROOT_PATH: RootPathInf = {
   gulp: 'gulp',
   dest: 'dest',
   dist: 'dist',
+  dist_server: 'dist/server',
+  dist_client: 'dist/client',
 };
 
 export default ROOT_PATH;
