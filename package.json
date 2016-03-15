@@ -2,9 +2,9 @@
   "name": "monitor-app",
   "version": "0.1.5",
   "description": "---",
-  "main": "src/server/app.js",
+  "main": "dist/server/app.js",
   "scripts": {
-    "start": "node src/server/app.js"
+    "start": "node dist/server/app.js"
   },
   "dependencies": {
     "body-parser": "^1.15.0",
