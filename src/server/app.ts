@@ -10,7 +10,7 @@ import bodyParser = require('body-parser');
 import path = require('path');
 
 const app: any  = express();
-const port: number = 9000;
+const port: number = process.env.PORT || 9000;
 
 app.server = http.createServer(app);
 

@@ -9,7 +9,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 var app = express();
-var port = 80;
+var port = process.env.PORT || 9000;
 app.server = http.createServer(app);
 app.use(express.static(path.join(__dirname, '..', '/client')));
 app.use(express.static(path.join(__dirname, '../..', 'node_modules')));
